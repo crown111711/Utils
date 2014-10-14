@@ -6,5 +6,6 @@
 
 #SqlHelper - 获取sql
 
-相关文章： http://blog.csdn.net/isea533/article/details/40044417
+地址：http://git.oschina.net/free/Mybatis_Utils/tree/master/SqlHelper 
 
+相关文章： http://blog.csdn.net/isea533/article/details/40044417
