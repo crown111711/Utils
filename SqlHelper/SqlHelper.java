@@ -100,9 +100,15 @@ public class SqlHelper {
         final Class<?>[] argTypes = method.getParameterTypes();
         for (int i = 0; i < argTypes.length; i++) {
             if (!RowBounds.class.isAssignableFrom(argTypes[i]) && !ResultHandler.class.isAssignableFrom(argTypes[i])) {
-                String paramName = String.valueOf(params.size());
+                String paramName = "param" + String.valueOf(params.size() + 1);
                 paramName = getParamNameFromAnnotation(method, i, paramName);
                 params.put(paramName, i >= args.length ? null : args[i]);
+            }
+        }
+        if (args != null && args.length == 1) {
+            Object _params = wrapCollection(args[0]);
+            if (_params instanceof Map) {
+                params.putAll((Map) _params);
             }
         }
         return getNamespaceSql(session, fullMapperMethodName, params);
@@ -129,6 +135,7 @@ public class SqlHelper {
      * @return
      */
     public static String getNamespaceSql(SqlSession session, String namespace, Object params) {
+        params = wrapCollection(params);
         Configuration configuration = session.getConfiguration();
         MappedStatement mappedStatement = configuration.getMappedStatement(namespace);
         TypeHandlerRegistry typeHandlerRegistry = mappedStatement.getConfiguration().getTypeHandlerRegistry();
@@ -157,7 +164,6 @@ public class SqlHelper {
                 }
             }
         }
-
         return sql;
     }
 
@@ -191,7 +197,7 @@ public class SqlHelper {
                 case DATE:
                 case TIME:
                 case TIMESTAMP:
-                //其他，包含字符串和其他特殊类型
+                    //其他，包含字符串和其他特殊类型
                 default:
                     strValue = "'" + strValue + "'";
 
@@ -199,8 +205,7 @@ public class SqlHelper {
             }
         } else if (Number.class.isAssignableFrom(javaType)) {
             //不加单引号
-        }
-        else {
+        } else {
             strValue = "'" + strValue + "'";
         }
         return sql.replaceFirst("\\?", strValue);
@@ -241,4 +246,22 @@ public class SqlHelper {
         return paramName;
     }
 
+    /**
+     * 简单包装参数
+     *
+     * @param object
+     * @return
+     */
+    private static Object wrapCollection(final Object object) {
+        if (object instanceof List) {
+            Map<String, Object> map = new HashMap<String, Object>();
+            map.put("list", object);
+            return map;
+        } else if (object != null && object.getClass().isArray()) {
+            Map<String, Object> map = new HashMap<String, Object>();
+            map.put("array", object);
+            return map;
+        }
+        return object;
+    }
 }
