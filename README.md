@@ -1,5 +1,13 @@
 #Mybatis工具类
 
+作者博客：http://blog.csdn.net/isea533
+
+作者QQ： 120807756
+
+作者邮箱： abel533@gmail.com
+
+Mybatis工具群： 211286137 (Mybatis相关工具插件等等)
+
 #通用Mapper
 
 地址:http://git.oschina.net/free/Mapper
