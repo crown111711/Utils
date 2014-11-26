@@ -27,7 +27,7 @@ gitosc地址：http://git.oschina.net/free/Mybatis_Utils/tree/master/SqlHelper
 相关文章： http://blog.csdn.net/isea533/article/details/40044417
 
 ##PerformanceInterceptor
-###    - 性能拦截器，用于输出每条 SQL 语句及其执行时间
+###性能拦截器，用于输出每条 SQL 语句及其执行时间
 
 gitosc地址：http://git.oschina.net/free/Mybatis_Utils/tree/master/Performance
 
