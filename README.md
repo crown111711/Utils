@@ -31,11 +31,13 @@ gitosc地址：http://git.oschina.net/free/Mybatis_Utils/tree/master/SqlHelper
 
 gitosc地址：http://git.oschina.net/free/Mybatis_Utils/tree/master/Performance
 
-简单说明：  
+###简单说明：  
 
 性能分析拦截器主要输出Sql以及Sql执行的时间，该拦截器会损失一定的整体性能，所以建议在测试环境使用，正式环境不建议使用。  
 
-另外，如果配置了多个拦截器，那么一定要把这个拦截器配置在第一个，否则其他需要修改Sql的拦截器会对该拦截器获取Sql部分（去掉获取Sql功能就可以随便配置了）产生影响。
+另外，如果配置了多个拦截器，那么一定要把这个拦截器配置在第一个，否则其他需要修改Sql的拦截器会对该拦截器获取Sql部分产生影响。  
+
+建议根据个人需求对该拦截器进行修改。  
 
 ##Swing版本的代码生成器,兼容通用Mapper
 
