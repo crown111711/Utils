@@ -39,8 +39,8 @@ gitosc地址：http://git.oschina.net/free/Mybatis_Utils/tree/master/Performance
 
 建议根据个人需求对该拦截器进行修改。    
 
-#CameHumpInterceptor
-##返回值Map结果的Key转为驼峰式
+##CameHumpInterceptor
+###返回值Map结果的Key转为驼峰式
 
 例如返回结果中Map的`{REAL_NAME:liuzh}`会转换为`{realName:liuzh}`  
 
