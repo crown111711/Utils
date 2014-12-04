@@ -8,35 +8,39 @@
 
 Mybatis工具群： 211286137 (Mybatis相关工具插件等等)
 
-#通用Mapper
+##通用Mapper
 
-地址:http://git.oschina.net/free/Mapper
+gitosc地址:http://git.oschina.net/free/Mapper
 
-或github地址:https://github.com/abel533/Mapper
+github地址:https://github.com/abel533/Mapper
 
-#分页插件
+##分页插件
 
-地址：http://git.oschina.net/free/Mybatis_PageHelper
+gitosc地址：http://git.oschina.net/free/Mybatis_PageHelper
 
-或github地址:https://github.com/pagehelper/Mybatis-PageHelper
+github地址:https://github.com/pagehelper/Mybatis-PageHelper
 
-#SqlHelper - 获取sql
+##SqlHelper - 获取sql
 
-地址：http://git.oschina.net/free/Mybatis_Utils/tree/master/SqlHelper 
+gitosc地址：http://git.oschina.net/free/Mybatis_Utils/tree/master/SqlHelper 
 
 相关文章： http://blog.csdn.net/isea533/article/details/40044417
 
-#PerformanceInterceptor - 性能分析，输出Sql
+##PerformanceInterceptor
+###性能拦截器，用于输出每条 SQL 语句及其执行时间
 
-地址：http://git.oschina.net/free/Mybatis_Utils/tree/master/Performance
+gitosc地址：http://git.oschina.net/free/Mybatis_Utils/tree/master/Performance
 
-简单说明：  
+###简单说明：  
 
 性能分析拦截器主要输出Sql以及Sql执行的时间，该拦截器会损失一定的整体性能，所以建议在测试环境使用，正式环境不建议使用。  
 
-另外，如果配置了多个拦截器，那么一定要把这个拦截器配置在第一个，否则其他需要修改Sql的拦截器会对该拦截器获取Sql部分（去掉获取Sql功能就可以随便配置了）产生影响。
+另外，如果配置了多个拦截器，那么一定要把这个拦截器配置在第一个，否则其他需要修改Sql的拦截器会对该拦截器获取Sql部分产生影响。  
 
-#CameHumpInterceptor - Map结果的Key转为驼峰式
+建议根据个人需求对该拦截器进行修改。    
+
+#CameHumpInterceptor
+##返回值Map结果的Key转为驼峰式
 
 例如返回结果中Map的`{REAL_NAME:liuzh}`会转换为`{realName:liuzh}`  
 
