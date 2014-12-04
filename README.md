@@ -36,6 +36,12 @@ Mybatis工具群： 211286137 (Mybatis相关工具插件等等)
 
 另外，如果配置了多个拦截器，那么一定要把这个拦截器配置在第一个，否则其他需要修改Sql的拦截器会对该拦截器获取Sql部分（去掉获取Sql功能就可以随便配置了）产生影响。
 
+#CameHumpInterceptor - Map结果的Key转为驼峰式
+
+例如返回结果中Map的`{REAL_NAME:liuzh}`会转换为`{realName:liuzh}`  
+
+地址：http://git.oschina.net/free/Mybatis_Utils/tree/master/CameHumpMap
+
 #Swing版本的代码生成器,兼容通用Mapper
 
 稍后~
