@@ -603,13 +603,13 @@ MBG配置中的其他几个元素，基本上都是`<context>`的子元素，这
 						    password="">
 			</jdbcConnection>
 			
-			<javaModelGenerator targetPackage="test.model" targetProject="G:\IdeaProjects\MyBatis\MyGenerator\src\main\java">
+			<javaModelGenerator targetPackage="test.model" targetProject="G:\MyProject\src\main\java">
 				<property name="trimStrings" value="true" />
 			</javaModelGenerator>
 			
-			<sqlMapGenerator targetPackage="test.xml"  targetProject="G:\IdeaProjects\MyBatis\MyGenerator\src\main\resources"/>
+			<sqlMapGenerator targetPackage="test.xml"  targetProject="G:\MyProject\src\main\resources"/>
 			
-			<javaClientGenerator type="XMLMAPPER" targetPackage="test.dao"  targetProject="G:\IdeaProjects\MyBatis\MyGenerator\src\main\java"/>
+			<javaClientGenerator type="XMLMAPPER" targetPackage="test.dao"  targetProject="G:\MyProject\src\main\java"/>
 			
 			<table tableName="%">
 				<generatedKey column="id" sqlStatement="Mysql"/>
