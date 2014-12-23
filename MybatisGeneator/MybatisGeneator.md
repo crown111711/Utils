@@ -22,6 +22,8 @@ MyBatis Geneator中文文档地址：
 
 有4种运行MBG的方法，具体请看文档 [运行 MyBatis Generator](http://generator.sturgeon.mopaas.com/running/running.html)  
 
+**MBG下载地址**:[http://repo1.maven.org/maven2/org/mybatis/generator/mybatis-generator-core/](http://repo1.maven.org/maven2/org/mybatis/generator/mybatis-generator-core/)
+
 **后续会专门为gitbook完善此部分**
 
 ##[XML配置详解](http://generator.sturgeon.mopaas.com/configreference/xmlconfig.html)
