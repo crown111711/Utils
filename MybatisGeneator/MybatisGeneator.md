@@ -490,6 +490,20 @@ MBG配置中的其他几个元素，基本上都是`<context>`的子元素，这
 	  	values (#{id,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{logindate,jdbcType=TIMESTAMP},#{loginip,jdbcType=VARCHAR})
 	</insert>
 
+配置示例三：
+
+	<table tableName="user login info" domainObjectName="UserLoginInfo">
+      	<generatedKey column="id" sqlStatement="JDBC"/>
+    </table>
+
+对应的生成结果：
+
+	  <insert id="insert" keyProperty="id" parameterType="test.model.UserLoginInfo" useGeneratedKeys="true">
+	    	insert into user login info (username, logindate, loginip)
+	    	values (#{username,jdbcType=VARCHAR}, #{logindate,jdbcType=TIMESTAMP}, #{loginip,jdbcType=VARCHAR})
+	  </insert>
+
+
 **2. [`<columnRenamingRule>`](http://generator.sturgeon.mopaas.com/configreference/columnRenamingRule.html) 元素**  
 
 该元素最多可以配置一个，使用该元素可以在生成列之前，对列进行重命名。这对那些存在同一前缀的字段想在生成属性名时去除前缀的表非常有用。 例如假设一个表包含以下的列：

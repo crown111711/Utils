@@ -46,10 +46,6 @@ gitosc地址：http://git.oschina.net/free/Mybatis_Utils/tree/master/Performance
 
 地址：http://git.oschina.net/free/Mybatis_Utils/tree/master/CameHumpMap
 
-##MybatisGeneator 代码生成器,兼容通用Mapper
-
-###MybatisGeneator详解  
+##MybatisGeneator详解  
 
 http://git.oschina.net/free/Mybatis_Utils/tree/master/MybatisGeneator/MybatisGeneator.md
-
-###通用Mapper代码生成器插件后续提供
