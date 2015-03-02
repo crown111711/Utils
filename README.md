@@ -8,6 +8,9 @@
 
 Mybatis工具群： 211286137 (Mybatis相关工具插件等等)
 
+##强烈推荐必读文章
+
+
 ##通用Mapper
 
 gitosc地址:http://git.oschina.net/free/Mapper
