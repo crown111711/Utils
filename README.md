@@ -10,6 +10,7 @@ Mybatis工具群： 211286137 (Mybatis相关工具插件等等)
 
 ##强烈推荐必读文章
 
+- [深入了解MyBatis参数](http://git.oschina.net/free/Mybatis_Utils/blob/master/Blog/%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3MyBatis%E5%8F%82%E6%95%B0.md)
 
 ##通用Mapper
 
