@@ -15,7 +15,7 @@ import java.util.regex.Pattern;
 /**
  * MyBatis Map类型大写下划线Key转小写驼峰形式
  *
- * @author huangyong
+ * @author liuzh/isea533/abel533
  * @since 1.0.0
  */
 @Intercepts(
