@@ -24,6 +24,12 @@ gitosc地址：http://git.oschina.net/free/Mybatis_PageHelper
 
 github地址:https://github.com/pagehelper/Mybatis-PageHelper
 
+##SqlMapper
+
+一个通过MyBatis直接执行SQL的工具，包含详细的文档和设计思路
+
+gitosc地址：http://git.oschina.net/free/Mybatis_Utils/tree/master/SqlMapper
+
 ##SqlHelper - 获取sql
 
 gitosc地址：http://git.oschina.net/free/Mybatis_Utils/tree/master/SqlHelper 
