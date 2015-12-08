@@ -1,12 +1,12 @@
 #SqlMapper介绍
 
+能不能直接用MyBatis执行SQL呢？
+
 可能有些人也有过类似需求，一般都会选择使用其他的方式如Spring-JDBC等方式解决。
 
 能否通过MyBatis实现这样的功能呢？
 
-为了让通用Mapper更彻底的支持多表操作以及更灵活的操作，在<b>2.2.0版本</b>增加了一个可以直接执行SQL的新类`SqlMapper`。
-
-通过这篇博客，我们来了解一下[`SqlMapper`](http://git.oschina.net/free/Mapper/blob/master/src/main/java/com/github/abel533/sql/SqlMapper.java)。
+当然可以，`SqlMapper`就提供了这样的功能。
 
 ##`SqlMapper`提供的方法
 
@@ -153,6 +153,13 @@ result = sqlMapper.delete("delete from country where id = #{id}", 35);
 
 >[深入了解MyBatis参数](http://blog.csdn.net/isea533/article/details/44002219)
 
+##重点提醒[必看]
+
+在使用`SqlMapper`写SQL的时候建议使用参数形式的可以是${}或#{}
+
+不建议将参数直接拼到字符串中，如 `"select * from xxx where id = " + id`，当大量这么使用的时候由于不同`id`产生不同的MappedStatement，由于MyBatis缓存MappedStatement而占用更多的内存，最终可能会内存溢出。
+
+如果使用如`"select * from xxx where id = #{id}"`，由于整个SQL只缓存一次，所以不会出现问题。
 
 ##实现原理
 
