@@ -1,5 +1,9 @@
 #Mybatis工具类
 
+##SqlHelper_old.java支持3.1.x~3.2.x
+
+##SqlHelper.java支持3.2.x~3.3.x
+
 #SqlHelper - 获取sql
 
 相关文章： http://blog.csdn.net/isea533/article/details/40044417
