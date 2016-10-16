@@ -37,4 +37,4 @@ City city = (City) mapper.selectById(1L, "tk.mybatis.model.City");
 
 **更变态直观的例子就是SQL也是动态传入${sql}这样方式的，不同SQL配不同的结果类型更能说明问题。**
 
-如果看到这里觉得有用，你就可以继续往下看实现原理。
+更多内容继续看[MyBatis 返回动态结果类型插件](http://blog.csdn.net/isea533/article/details/52831556)
