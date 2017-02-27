@@ -24,6 +24,12 @@ gitosc地址：http://git.oschina.net/free/Mybatis_PageHelper
 
 github地址:https://github.com/pagehelper/Mybatis-PageHelper
 
+## JdbcType 自动配置插件
+
+运行时自动添加 jdbcType 属性
+
+gitosc地址：http://git.oschina.net/free/Mybatis_Utils/tree/master/JdbcType
+
 ##SqlMapper
 
 一个通过MyBatis直接执行SQL的工具，包含详细的文档和设计思路
@@ -33,7 +39,7 @@ gitosc地址：http://git.oschina.net/free/Mybatis_Utils/tree/master/SqlMapper
 ##SqlHelper - 获取sql
 
 gitosc地址：http://git.oschina.net/free/Mybatis_Utils/tree/master/SqlHelper 
- 
+
 相关文章： http://blog.csdn.net/isea533/article/details/40044417
 
 ##PerformanceInterceptor
