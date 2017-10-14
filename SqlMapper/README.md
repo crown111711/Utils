@@ -1,4 +1,4 @@
-#SqlMapper介绍
+# SqlMapper介绍
 
 能不能直接用MyBatis执行SQL呢？
 
@@ -8,7 +8,7 @@
 
 当然可以，`SqlMapper`就提供了这样的功能。
 
-##`SqlMapper`提供的方法
+## `SqlMapper`提供的方法
 
 `SqlMapper`提供了以下这些公共方法：
 
@@ -53,7 +53,7 @@ String sql = "<script>select * from sys_user where 1=1"  +
 
 在`selectXXX`方法中，使用`Class<T> resultType`可以指定返回类型，否则就是`Map<String,Object>`类型。
 
-##实例化`SqlMapper`
+## 实例化`SqlMapper`
 
 `SqlMapper`构造参数`public SqlMapper(SqlSession sqlSession)`，需要一个入参`SqlSession sqlSession`，在一般系统中，可以按照下面的方式获取：
 
@@ -72,13 +72,13 @@ SqlMapper sqlMapper = new SqlMapper(sqlSession);
 
 在Service中使用的时候可以直接使用`@Autowired`注入。
 
-##简单例子
+## 简单例子
 
 在`src/test/java`目录的`com.github.abel533.sql`包中包含这些方法的测试。
 
 下面挑几个看看如何使用。
 
-###`selectList`
+### `selectList`
 
 ```java
 //查询，返回List<Map>
@@ -103,7 +103,7 @@ countryList = sqlMapper.selectList("<script>" +
         "</script>", country, Country.class);
 ```
 
-###`selectOne`
+### `selectOne`
 
 ```java
 Map<String, Object> map = sqlMapper.selectOne("select * from country where id = 35");
@@ -115,7 +115,7 @@ Country country = sqlMapper.selectOne("select * from country where id = 35", Cou
 country = sqlMapper.selectOne("select * from country where id = #{id}", 35, Country.class);
 ```
 
-###`insert,update,delete`
+### `insert,update,delete`
 
 ```java
 //insert
@@ -147,13 +147,13 @@ result = sqlMapper.delete("delete from country where id = #{id}", 35);
 
 ```
 
-###注意
+### 注意
 
 通过上面这些例子应该能对此有个基本的了解，但是如果你使用参数方式，建议阅读下面的文章：
 
 >[深入了解MyBatis参数](http://blog.csdn.net/isea533/article/details/44002219)
 
-##重点提醒[必看]
+## 重点提醒[必看]
 
 在使用`SqlMapper`写SQL的时候建议使用参数形式的可以是${}或#{}
 
@@ -161,7 +161,7 @@ result = sqlMapper.delete("delete from country where id = #{id}", 35);
 
 如果使用如`"select * from xxx where id = #{id}"`，由于整个SQL只缓存一次，所以不会出现问题。
 
-##实现原理
+## 实现原理
 
 2015-03-09：最初想要设计这个功能的时候，感觉会很复杂，想的也复杂，需要很多个类，因此当时没有实现。
 
